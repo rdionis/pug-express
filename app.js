@@ -10,7 +10,6 @@ app.get('/', async(req, res) => {
 	const query = await axios.get('http://localhost:3001/results');
 	res.render('index', {employees: query.data});
 });
-// Here, we are declaring a route (/), which will respond to a GET request with the text “Hello, World!”
 
 
 app.listen(3000, () => console.log(`Server listening on ${PORT}` ));
